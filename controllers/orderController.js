@@ -337,8 +337,8 @@ export const trackOrder = async (req, res) => {
        payment_method_types: ['card'],
        mode: 'payment',
        line_items,
-       success_url: `http://localhost:5173/success?orderId=${savedOrder._id}`,
-       cancel_url: 'http://localhost:5173/',
+       success_url: `https://modifyx.vercel.app/`,
+       cancel_url: 'https://modifyx.vercel.app/',
      });
     
      const populatedOrder = await savedOrder.populate('user', 'email name');
